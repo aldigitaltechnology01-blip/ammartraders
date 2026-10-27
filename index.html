@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#103d38">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Ammar Wholesale Shop — private AI-powered operations dashboard demo for wholesale beauty distribution.">
+  <title>Ammar Traders | Owner Workspace</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="demo-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<svg class="svg-icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 1.7 6.3L20 10l-6.3 1.7L12 18l-1.7-6.3L4 10l6.3-1.7L12 2Z"/><path d="m20 17 .8 2.2L23 20l-2.2.8L20 23l-.8-2.2L17 20l2.2-.8L20 17ZM4 15l.5 1.5L6 17l-1.5.5L4 19l-.5-1.5L2 17l1.5-.5L4 15Z"/></symbol>
+  <symbol id="i-orders" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5M12 12v10M7.5 4.5l9 5"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 9V6a3 3 0 0 1 3-3h12M16 13h5"/><circle cx="16" cy="13" r=".6"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h12v12H3V6ZM15 10h4l3 4v4h-7v-8Z"/><circle cx="7" cy="19" r="2"/><circle cx="18" cy="19" r="2"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="m3 13 10-10h8v8L11 21 3 13Z"/><circle cx="17" cy="7" r="1.2"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16l4-4 3 2 6-8"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M10 2h4l.7 2.7 2 .8 2.4-1.4 2.8 2.8-1.4 2.4.8 2L24 12v0l-2.7.7-.8 2 1.4 2.4-2.8 2.8-2.4-1.4-2 .8L14 22h-4l-.7-2.7-2-.8-2.4 1.4-2.8-2.8 1.4-2.4-.8-2L0 12l2.7-.7.8-2L2.1 6.9l2.8-2.8 2.4 1.4 2-.8L10 2Z" transform="translate(1 0) scale(.92 1)"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7Z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M10 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5M14 7l5 5-5 5M19 12H8"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 6v5h-5M4 18v-5h5"/><path d="M5.5 9a7.5 7.5 0 0 1 12.7-2.1L20 11M4 13l1.8 4.1A7.5 7.5 0 0 0 18.5 15"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m3 7 9 7 9-7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-3 8-9 10C6 20 3 17 3 12V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 17v4h16v-4"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 5 7 7-7 7"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 7h.01"/></symbol>
+</svg>
+
+<div class="app-shell" id="appShell">
+  <div class="sidebar-mask" id="sidebarMask" hidden></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-symbol">a<span>t</span><i></i></div>
+      <div class="brand-name"><strong>AMMAR<span>TRADERS</span></strong><small>OWNER WORKSPACE</small></div>
+      <button class="side-close icon-btn" id="closeSidebar" aria-label="Close menu"><svg><use href="#i-x"/></svg></button>
+    </div>
+    <div class="shop-identity"><span class="shop-icon">✦</span><div><strong>Ammar Wholesale Shop</strong><small>Beauty Products · Kunri</small></div><span class="identity-dot"></span></div>
+    <div class="nav-heading">WORKSPACE</div>
+    <nav class="side-nav" id="sideNav" aria-label="Main navigation">
+      <button data-view="dashboard" class="nav-link active"><svg><use href="#i-grid"/></svg> <span>Overview</span></button>
+      <button data-view="boss" class="nav-link"><svg><use href="#i-spark"/></svg> <span>AI Business Boss</span><em class="ai-nav-dot"></em></button>
+      <button data-view="orders" class="nav-link"><svg><use href="#i-orders"/></svg> <span>Orders</span></button>
+      <button data-view="inventory" class="nav-link"><svg><use href="#i-box"/></svg> <span>Inventory</span></button>
+      <button data-view="payments" class="nav-link"><svg><use href="#i-wallet"/></svg> <span>Payments & Udhaar</span></button>
+      <button data-view="deliveries" class="nav-link"><svg><use href="#i-truck"/></svg> <span>Deliveries</span></button>
+      <button data-view="offers" class="nav-link"><svg><use href="#i-tag"/></svg> <span>Offers & Email</span></button>
+      <button data-view="reports" class="nav-link"><svg><use href="#i-chart"/></svg> <span>Reports</span></button>
+    </nav>
+    <div class="nav-heading nav-bottom-heading">PREFERENCES</div>
+    <nav class="side-nav"><button data-view="settings" class="nav-link"><svg><use href="#i-settings"/></svg> <span>Settings & Setup</span></button></nav>
+    <div class="sidebar-bottom">
+      <div class="support-card"><span class="support-orbit">✦</span><strong>Meet your AI Assistant</strong><small>Ask questions or manage your business using simple messages.</small><button id="sidebarAsk">Start a conversation <svg><use href="#i-arrow"/></svg></button></div>
+      <div class="sidebar-user"><div class="avatar">AT</div><div><strong>Owner account</strong><small>Private workspace demo</small></div><span class="more-dots">•••</span></div>
+    </div>
+  </aside>
+
+  <div class="app-content">
+    <header class="topbar">
+      <div class="topbar-left"><button id="openSidebar" class="icon-btn mobile-menu" aria-label="Open navigation"><svg><use href="#i-menu"/></svg></button><div class="breadcrumb">Workspace <svg><use href="#i-chevron"/></svg> <strong id="breadName">Overview</strong></div></div>
+      <div class="topbar-right"><span class="live-date" id="todayDate"></span><button id="topAsk" class="top-ask"><svg><use href="#i-spark"/></svg> Ask AI Boss</button><div class="header-avatar" title="Ammar Traders owner">AT</div></div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="data-banner"><svg><use href="#i-info"/></svg><span><strong>Sample workspace:</strong> Charts, tables and balances show fictional data from <b>26 Oct 2026</b>. AI Boss can use your connected n8n workflow; dashboard figures do not auto-sync.</span><button data-view="settings">Connection settings <svg><use href="#i-arrow"/></svg></button></div>
+
+      <section id="view-dashboard" class="view active">
+        <div class="page-intro"><div><p class="eyebrow">YOUR BUSINESS AT A GLANCE</p><h1>Assalamualaikum, <span>Welcome back!</span> <span class="wave">✳</span></h1><p>Here's what’s happening with your wholesale business.</p></div><button class="outline-button" id="dashboardReport"><svg><use href="#i-chart"/></svg> Get AI report</button></div>
+        <div class="hero">
+          <div class="hero-content"><div class="hero-label"><span></span> AMMAR WHOLESALE SHOP · KUNRI</div><h2>Smarter wholesale.<br><em>Stronger business.</em></h2><p>Everything from shop orders to payments, stock and deliveries — powered by one AI Business Boss.</p><button class="hero-btn" data-view="boss">Talk to AI Boss <svg><use href="#i-arrow"/></svg></button></div>
+          <div class="hero-image"><img src="assets/ammar-shop.png" alt="Ammar Wholesale Shop storefront in Kunri"><span>YOUR SHOP · YOUR CONTROL</span></div>
+          <div class="hero-decoration"></div>
+        </div>
+        <div class="section-header"><div><h2>Business summary</h2><p>Snapshot of your wholesale operations</p></div><span class="snapshot-pill"><svg><use href="#i-calendar"/></svg> 26 Oct 2026 · demo</span></div>
+        <div class="stats-grid" id="statsGrid"></div>
+        <div class="dashboard-grid">
+          <div class="panel sales-panel"><div class="panel-head"><div><h3>Sales performance</h3><p>Daily invoiced amount · last 7 days of sample data</p></div><span class="subtle-badge">PKR</span></div><div id="salesChart" class="chart-wrap"></div></div>
+          <div class="panel quick-panel"><div class="panel-head"><div><h3>Quick actions</h3><p>Let your AI Boss handle it</p></div><span class="spark-tiny">✦</span></div><div class="quick-grid">
+            <button data-command="Aaj ke orders aur total sales ka report do, date 2026-10-26" data-title="Sales report"><span class="quick-icon mint"><svg><use href="#i-chart"/></svg></span><strong>Sales report</strong><small>Instant summary</small></button>
+            <button data-command="Kin shops ki overdue payment hai? Due amounts ke saath batao" data-title="Pending payments"><span class="quick-icon blush"><svg><use href="#i-wallet"/></svg></span><strong>Payments due</strong><small>Track outstanding</small></button>
+            <button data-command="Kon se products low stock mein hain?" data-title="Low stock"><span class="quick-icon lavender"><svg><use href="#i-box"/></svg></span><strong>Low stock</strong><small>Reorder smartly</small></button>
+            <button data-command="Kaun kaun si deliveries pending aur dispatched hain?" data-title="Delivery status"><span class="quick-icon sand"><svg><use href="#i-truck"/></svg></span><strong>Deliveries</strong><small>Check progress</small></button>
+          </div></div>
+        </div>
+        <div class="dashboard-grid bottom-grid">
+          <div class="panel"><div class="panel-head"><div><h3>Recent orders</h3><p>Latest sample orders from retailers</p></div><button class="inline-link" data-view="orders">View all <svg><use href="#i-arrow"/></svg></button></div><div id="recentOrders" class="table-scroll"></div></div>
+          <div class="panel"><div class="panel-head"><div><h3>Delivery pipeline</h3><p>Where your orders stand</p></div><button class="inline-link" data-view="deliveries">View <svg><use href="#i-arrow"/></svg></button></div><div id="deliveryWidget"></div></div>
+        </div>
+        <footer class="page-footer">Crafted for Ammar Wholesale Shop by <strong>Al Digital Technology</strong> · Powering Your Digital Future</footer>
+      </section>
+
+      <section id="view-boss" class="view">
+        <div class="page-intro"><div><p class="eyebrow">YOUR COMMAND CENTER</p><h1>Meet your <span>AI Business Boss</span> <span class="wave">✦</span></h1><p>Type in Roman Urdu or English. Ask, analyze, plan and manage.</p></div><span id="bossModeLabel" class="mode-pill">Demo mode</span></div>
+        <div class="boss-layout">
+          <div class="assistant-shell">
+            <div class="assistant-top"><div class="assistant-identity"><span class="bot-avatar">✦</span><div><strong>Ammar AI Boss</strong><small><span class="online-dot"></span><span id="botModeText">Sample data assistant</span></small></div></div><div class="assistant-actions"><button id="resetChat" class="icon-btn" title="New conversation" aria-label="New conversation"><svg><use href="#i-refresh"/></svg></button></div></div>
+            <div class="chat-feed" id="chatFeed" aria-live="polite" aria-relevant="additions"></div>
+            <div class="suggestion-strip" id="chatSuggestions"></div>
+            <form id="chatForm" class="chat-form"><textarea id="chatInput" placeholder="E.g. Aaj kitni sales hui?" rows="1" maxlength="2000" aria-label="Message to AI Boss"></textarea><button id="sendButton" type="submit" aria-label="Send message"><svg><use href="#i-send"/></svg></button></form>
+            <p class="chat-disclaimer">AI can be incorrect. Confirm any order, payment, or email action against your records.</p>
+          </div>
+          <aside class="assistant-side"><div class="assistant-tip"><div class="tip-icon">✦</div><h3>Your command center</h3><p>Ask for reports or instruct AI Boss to prepare tasks using connected n8n workflows.</p><div class="mini-divider"></div><strong>Popular commands</strong><div id="bossCommandList" class="boss-command-list"></div></div><div class="secure-note"><svg><use href="#i-shield"/></svg><div><strong>Keep business data private</strong><p>Before publishing online, add real owner login and protect the n8n webhook on the server.</p></div></div></aside>
+        </div>
+      </section>
+
+      <section id="view-orders" class="view"><div class="page-intro"><div><p class="eyebrow">ORDER OPERATIONS</p><h1>Shop <span>orders</span></h1><p>Track what every retailer ordered and what needs attention.</p></div><button class="primary-button" id="newOrder"><svg><use href="#i-plus"/></svg> New order request</button></div><div class="summary-three" id="orderMiniStats"></div><div class="panel data-panel"><div class="panel-head"><div><h3>All orders</h3><p>Fictional retailer orders · most recent first</p></div><div class="filter-tools"><input id="orderSearch" class="filter-input" placeholder="Search shop or order ID" aria-label="Search orders"><select id="orderFilter" aria-label="Filter order status"><option value="all">All statuses</option><option value="CONFIRMED">Confirmed</option><option value="PACKED">Packed</option><option value="DISPATCHED">Dispatched</option><option value="DELIVERED">Delivered</option></select></div></div><div id="orderTable" class="table-scroll"></div></div></section>
+
+      <section id="view-inventory" class="view"><div class="page-intro"><div><p class="eyebrow">WAREHOUSE CONTROL</p><h1>Smart <span>inventory</span></h1><p>Products, wholesale prices, and low-stock visibility.</p></div><button class="outline-button" data-command="Kaun se products ka stock kam hai aur reorder priority kya honi chahiye?" data-title="Inventory report"><svg><use href="#i-spark"/></svg> Ask AI about stock</button></div><div class="summary-three" id="inventoryMiniStats"></div><div class="panel data-panel"><div class="panel-head"><div><h3>Product catalog</h3><p>Demo products and quantities</p></div><div class="filter-tools"><input id="inventorySearch" class="filter-input" placeholder="Search product" aria-label="Search inventory"><select id="inventoryFilter" aria-label="Filter product category"><option value="all">All categories</option><option value="COS">Cosmetics</option><option value="MAKEUP">Makeup</option><option value="SKIN">Skincare</option><option value="HAIR">Haircare</option><option value="ACCESS">Accessories</option></select></div></div><div id="inventoryTable" class="table-scroll"></div></div></section>
+
+      <section id="view-payments" class="view"><div class="page-intro"><div><p class="eyebrow">ACCOUNTS & COLLECTION</p><h1>Payments <span>& udhaar</span></h1><p>Know who has paid and which invoices are outstanding.</p></div><button class="outline-button" data-command="Due payment reminders ke drafts banao, send mat karna" data-title="Payment reminders"><svg><use href="#i-mail"/></svg> Draft reminders</button></div><div class="summary-three" id="paymentMiniStats"></div><div class="panel data-panel"><div class="panel-head"><div><h3>Outstanding balances</h3><p>Sample unpaid order balances — not real customer debts</p></div><input id="paymentSearch" class="filter-input" placeholder="Search retailer" aria-label="Search pending payments"></div><div id="paymentTable" class="table-scroll"></div></div></section>
+
+      <section id="view-deliveries" class="view"><div class="page-intro"><div><p class="eyebrow">DISTRIBUTION CONTROL</p><h1>Delivery <span>tracker</span></h1><p>Track pending, dispatched and delivered retailer orders.</p></div><button class="outline-button" data-command="Pending deliveries ka full report shop name aur areas ke sath do" data-title="Delivery report"><svg><use href="#i-truck"/></svg> Ask AI about deliveries</button></div><div class="summary-three" id="deliveryMiniStats"></div><div class="panel data-panel"><div class="panel-head"><div><h3>Delivery schedule</h3><p>Fictional fulfillment activity</p></div><select id="deliveryFilter" aria-label="Filter delivery status"><option value="all">All deliveries</option><option value="PENDING">Pending</option><option value="DISPATCHED">Dispatched</option><option value="DELIVERED">Delivered</option></select></div><div id="deliveryTable" class="table-scroll"></div></div></section>
+
+      <section id="view-offers" class="view"><div class="page-intro"><div><p class="eyebrow">CUSTOMER ENGAGEMENT</p><h1>Offers <span>& emails</span></h1><p>Prepare promotions and payment reminders with approval before sending.</p></div></div><div class="offers-grid"><div class="panel offer-feature"><span class="feature-icon"><svg><use href="#i-tag"/></svg></span><h2>Make every offer count.</h2><p>Tell the AI Boss the discount, eligible products and offer period. It can prepare email drafts for opted-in retailers.</p><div class="offer-actions"><button class="primary-button" data-command="MAKEUP products par 5% discount ki email campaign draft karo. Aaj send na karna; dates confirm karna." data-title="Create discount campaign">Create offer draft <svg><use href="#i-arrow"/></svg></button><button class="outline-button" data-command="Pending payments ke liye polite reminder email drafts taiyar karo, send na karo" data-title="Create payment reminders">Payment reminder drafts</button></div><div class="safe-email-caption"><svg><use href="#i-shield"/></svg> Emails require valid recipients, consent and owner approval. Demo email sender remains disabled.</div></div><div class="panel"><div class="panel-head"><div><h3>Offer checklist</h3><p>Everything to confirm before broadcasting</p></div></div><div class="checklist"><div><span>1</span><p>Choose products and discount rate</p></div><div><span>2</span><p>Set start and end time in PKT</p></div><div><span>3</span><p>Review pricing and eligible retailers</p></div><div><span>4</span><p>Approve drafts before any sends</p></div></div></div></div><div class="panel data-panel"><div class="panel-head"><div><h3>Prepared sample offers</h3><p>Fictional test campaigns</p></div></div><div id="offerTable" class="table-scroll"></div></div></section>
+
+      <section id="view-reports" class="view"><div class="page-intro"><div><p class="eyebrow">BUSINESS INTELLIGENCE</p><h1>Reports <span>& insights</span></h1><p>Understand the business with reliable sample records.</p></div><button id="exportReport" class="outline-button"><svg><use href="#i-download"/></svg> Export sample CSV</button></div><div class="summary-three" id="reportsMiniStats"></div><div class="reports-grid"><div class="panel"><div class="panel-head"><div><h3>Daily sales</h3><p>Sample daily totals, not live data</p></div></div><div id="reportsChart" class="chart-wrap"></div></div><div class="panel"><div class="panel-head"><div><h3>Ask AI for insights</h3><p>Get answers using your connected workflows</p></div></div><div class="report-prompts"><button data-command="Aaj ka complete business performance summary do" data-title="Business summary"><svg><use href="#i-chart"/></svg> Complete daily business summary <svg class="right-arrow"><use href="#i-arrow"/></svg></button><button data-command="Top 5 retailers sales volume ke hisaab se batao" data-title="Top retailers"><svg><use href="#i-orders"/></svg> Top-performing retailers <svg class="right-arrow"><use href="#i-arrow"/></svg></button><button data-command="Overdue payments aur delivery delays ka report do" data-title="Risk report"><svg><use href="#i-wallet"/></svg> Pending work and payment risks <svg class="right-arrow"><use href="#i-arrow"/></svg></button></div></div></div></section>
+
+      <section id="view-settings" class="view"><div class="page-intro"><div><p class="eyebrow">OWNER PREFERENCES</p><h1>Workspace <span>settings</span></h1><p>Check the AI connection and keep the owner dashboard secure.</p></div></div><div class="settings-grid"><div class="panel setting-panel"><div class="panel-head"><div><h3>AI Boss connection</h3><p>Connect the owner chat to your n8n endpoint</p></div></div><label class="setting-label" for="webhookDisplay">Configured n8n webhook</label><div class="read-only-input"><input id="webhookDisplay" readonly aria-label="Configured webhook URL"><button id="copyWebhook" class="icon-btn" title="Copy webhook" aria-label="Copy webhook"><svg><use href="#i-copy"/></svg></button></div><div class="connection-row"><div><strong>Current assistant mode</strong><small id="settingModeDesc">Demo — uses fictional sample data</small></div><label class="toggle"><input type="checkbox" id="liveSwitch"><span class="toggle-visual"></span><b>Use live n8n Boss</b></label></div><div id="liveWarning" class="warning-note" hidden><svg><use href="#i-shield"/></svg> This web page cannot secure your owner webhook by itself. Only enable live mode on a properly authenticated, private deployment with server-side authorization and n8n CORS configured. Never publish this URL as an unrestricted public website.</div><button class="outline-button" id="testConnection"><svg><use href="#i-refresh"/></svg> Test connection (sends a chat message)</button><div class="feedback" id="testResult" role="status"></div></div><div class="panel setting-panel"><div class="panel-head"><div><h3>Business profile</h3><p>Brand appearance used in this demo</p></div></div><div class="profile-photo"><img src="assets/ammar-shop.png" alt="Ammar Wholesale Shop storefront"><div><strong>Ammar Wholesale Shop</strong><small>Kunri, Sindh · Beauty products wholesaler</small></div></div><div class="business-detail"><span>Workspace</span><strong>Owner operations</strong></div><div class="business-detail"><span>Brand colors</span><strong><i class="color-dot teal"></i><i class="color-dot red"></i> Teal + red + cream</strong></div><div class="business-detail"><span>Prepared by</span><strong>Al Digital Technology</strong></div></div><div class="panel security-panel"><div class="security-symbol"><svg><use href="#i-shield"/></svg></div><h3>Security before publishing</h3><p>GitHub Pages is public hosting and provides no owner login. A client-only PIN is not security. To use live stock, payment and order records, require proper account login and role-based access at a trusted backend. Do not put API secrets inside this website.</p></div></div></section>
+    </main>
+  </div>
+</div>
+
+<dialog id="orderDialog" class="order-dialog"><form method="dialog" class="dialog-inner" id="orderForm"><div class="dialog-head"><div><p class="eyebrow">NEW REQUEST</p><h2>Prepare an order</h2></div><button type="button" class="icon-btn" id="closeDialog" aria-label="Close dialog"><svg><use href="#i-x"/></svg></button></div><p class="dialog-desc">Choose a retailer and product. The request opens in AI Boss for review — nothing is saved until the backend confirms it.</p><label>Retailer shop<select id="newShop" required></select></label><label>Product<select id="newProduct" required></select></label><div class="form-double"><label>Quantity<input id="newQty" type="number" min="1" max="10000" value="1" required></label><label>Discount (%)<input id="newDiscount" type="number" min="0" max="50" value="0" step="0.5" required></label></div><div class="quote-preview" id="quotePreview"></div><div class="dialog-actions"><button type="button" id="cancelOrder" class="outline-button">Cancel</button><button type="submit" id="prepareOrder" class="primary-button">Review in AI Boss <svg><use href="#i-arrow"/></svg></button></div></form></dialog>
+<div class="toast" id="toast" role="status"></div>
+</body></html>
